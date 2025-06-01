@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: rgb(38, 38, 38);
+  background-color: rgb(250, 250, 250);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Component styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px rgb(12, 182, 167);
+}
+
+.btn-primary {
+  background-color: rgb(12, 182, 167);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: rgb(10, 160, 147);
+}
+
+.btn-secondary {
+  background-color: rgb(249, 115, 22);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(234, 88, 12);
+}
+
+.btn-outline {
+  border: 2px solid rgb(12, 182, 167);
+  color: rgb(12, 182, 167);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: rgba(12, 182, 167, 0.1);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem 2.5rem;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.input-field:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px rgb(12, 182, 167);
+}
+
+.glass-card {
+  /* Tailwind CSS Custom Properties */
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(12 182 167 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: blur(16px);
+  --tw-backdrop-brightness: brightness(1.1);
+  --tw-backdrop-contrast: contrast(1.05);
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: opacity(0.9);
+  --tw-backdrop-saturate: saturate(1.1);
+  --tw-backdrop-sepia: ;
+  --tw-contain-size: ;
+  --tw-contain-layout: ;
+  --tw-contain-paint: ;
+  --tw-contain-style: ;
+
+  /* Glass Card Styles */
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-opacity)
+    var(--tw-backdrop-saturate);
+  border-radius: 0.75rem;
+  box-shadow: var(--tw-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  --tw-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+  --tw-backdrop-blur: blur(20px);
+  --tw-backdrop-brightness: brightness(1.15);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.glass-card:focus {
+  outline: none;
+  --tw-ring-shadow: 0 0 0 2px var(--tw-ring-color);
+  box-shadow: var(--tw-shadow), var(--tw-ring-shadow);
+}
+
+/* Variants */
+.glass-card-primary {
+  --tw-ring-color: rgb(12 182 167 / 0.5);
+  background-color: rgba(12, 182, 167, 0.1);
+  border: 1px solid rgba(12, 182, 167, 0.3);
+}
+
+.glass-card-dark {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.glass-card-animated {
+  animation: glassPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes glassPulse {
+  0% {
+    --tw-backdrop-blur: blur(16px);
+    --tw-backdrop-brightness: brightness(1.1);
+  }
+  100% {
+    --tw-backdrop-blur: blur(24px);
+    --tw-backdrop-brightness: brightness(1.2);
+  }
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 80rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Utility classes */
+.text-primary {
+  color: rgb(12, 182, 167);
+}
+.text-success {
+  color: rgb(12, 182, 46);
+}
+.text-error-500 {
+  color: #ef4444; /* Tailwind Red 500 */
+}
+
+.bg-primary {
+  background-color: rgb(12, 182, 167);
+}
+
+.bg-secondary {
+  background-color: #6246ea;
+}
+
+.border-primary {
+  border-color: rgb(12, 182, 167);
+}
+
+/* Error (red) background */
+.bg-error-500 {
+  background-color: #ef4444; /* Tailwind Red 500 */
+  color: white; /* optional: text color for contrast */
+}
+
+/* Warning (amber/yellow) background */
+.bg-warning-500 {
+  background-color: #f59e0b; /* Tailwind Amber 500 */
+  color: white;
+}
+
+/* Success (green) background */
+.bg-success-500 {
+  background-color: #22c55e; /* Tailwind Green 500 */
+  color: white;
+}
+
+/* Neutral (gray) background */
+.bg-neutral-200 {
+  background-color: #e5e7eb; /* Tailwind Gray 200 */
+  color: black; /* darker text for contrast */
+}
+
+.primary {
+  background-color: rgb(230 247 246);
+}
+.secondary {
+  background-color: rgb(220, 231, 230);
+}
