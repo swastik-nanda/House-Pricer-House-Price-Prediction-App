@@ -51,6 +51,7 @@ const LoginPage = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,13 +61,10 @@ const LoginPage = () => {
     setIsLoading(true);
 
     try {
-      const { data } = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        {
-          email: formData.email,
-          password: formData.password,
-        }
-      );
+      const { data } = await axios.post(`${backendUrl}/api/auth/login`, {
+        email: formData.email,
+        password: formData.password,
+      });
 
       localStorage.setItem("token", data.token);
 

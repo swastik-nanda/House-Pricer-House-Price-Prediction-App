@@ -1,5 +1,6 @@
 // backend/controllers/predictController.js
 const axios = require("axios");
+require("dotenv").config();
 
 const predictPrice = async (req, res) => {
   try {
@@ -7,7 +8,7 @@ const predictPrice = async (req, res) => {
 
     // Call Python model API
     const response = await axios.post(
-      "http://localhost:5000/predict",
+      `${process.env.BACKEND_URL}/predict`,
       userInput
     );
 

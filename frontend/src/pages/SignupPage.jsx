@@ -93,6 +93,7 @@ const SignupPage = () => {
       ...strengthMap[strength],
     };
   };
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -103,7 +104,7 @@ const SignupPage = () => {
     setErrors({}); // clear previous errors
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch(`${backendUrl}/api/auth/register`, {
         // Adjust URL as per your backend
         method: "POST",
         headers: {
