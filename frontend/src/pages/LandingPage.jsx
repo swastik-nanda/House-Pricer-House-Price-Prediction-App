@@ -53,7 +53,7 @@ const LandingPage = () => {
                 HomePricer.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link to="/signup">
+                <Link to="/home">
                   <Button size="lg" rightIcon={<ArrowRight size={20} />}>
                     Get Started
                   </Button>
@@ -370,7 +370,7 @@ const LandingPage = () => {
               Join thousands of satisfied users who have made confident real
               estate decisions with HomePricer's AI-powered predictions.
             </p>
-            <Link to="/signup">
+            <Link to="/home">
               <Button
                 size="lg"
                 className="bg-white text-white hover:bg-neutral-100"
